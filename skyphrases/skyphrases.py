@@ -1,3 +1,12 @@
+import os
+
+# Crossplatform file path handling
+source_path = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    'skychallenge_skyphrase_input.txt'
+    )
+
+
 def check_duplicates(passphrase):
     """
     Function converts string into a list and compares it's length
