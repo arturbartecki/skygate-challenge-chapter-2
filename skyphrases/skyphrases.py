@@ -28,3 +28,8 @@ def count_valid_phrases_in_file(source_file):
             if check_duplicates(line):
                 count += 1
     return count
+
+
+# Print the amount of valid skyphrases
+if __name__ == '__main__':
+    print(count_valid_phrases_in_file(source_path))
