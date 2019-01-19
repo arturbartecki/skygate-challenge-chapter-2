@@ -6,3 +6,16 @@ def check_duplicates(passphrase):
     splitted_phrase = passphrase.split()
     if len(splitted_phrase) == len(set(splitted_phrase)):
         return True
+
+
+def count_valid_phrases_in_file(source_file):
+    """
+    Function iterates through the file
+    and checks each line if it's valid skyphrase
+    """
+    count = 0
+    with open(source_file) as fn:
+        for line in fn:
+            if check_duplicates(line):
+                count += 1
+    return count
